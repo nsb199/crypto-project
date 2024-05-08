@@ -1,0 +1,377 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Montserrat, san-serif;
+  font-weight: 400;
+
+  transition: all 0.3s ease;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  animation: zoomIn 1.5s forwards;
+  background: linear-gradient(to top left, #f0f0f0, #f8f9fa, #ffffff, #ffefdb, #BA9F33);
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+}
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+ul {
+  list-style: none;
+}
+header {
+  display: flex;
+  padding: 0.5rem 3rem;
+  justify-content: space-between;
+  align-items: center;
+}
+header img {
+  width: 120px;
+}
+
+.btn {
+  padding: 6px 20px;
+  border: 2px solid #BA9F33;
+  border-radius: 5px;
+  background-color: #BA9F33;
+  color: #fff;
+  transition: all 300ms ease;
+}
+.btn:hover {
+  background-color: transparent;
+  color: #BA9F33;
+}
+
+main {
+  padding: 3rem;
+}
+#hero {
+  background-image: url(assets/main_image.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 90%;
+  min-height: 60vh;
+  padding: 2rem 0;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+#hero h1 {
+  font-size: 5rem;
+}
+#hero p,
+#hero h1 {
+  margin-bottom: 0.5rem;
+  color: #2F2E41;
+  animation: slideInLeft 2s ease-out forwards;
+}
+#hero a {
+  margin-top: 2rem;
+}
+
+#top-coins {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  margin-top: 3rem;
+  font-size: 1.5rem;
+  color: #BA9F33;
+}
+#top-coins h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.coins-wrapper {
+  display: flex;
+  gap: 20px;
+  overflow-y: hidden;
+  overflow-x: scroll;
+}
+.coins-wrapper::-webkit-scrollbar {
+  display: none;
+}
+.coins {
+  min-width: 20rem;
+  display: flex;
+  align-items: center;
+}
+.coins img {
+  margin-right: 2rem;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 3rem;
+  background-color: #ba9f33;
+  color: #fff;
+}
+footer a {
+  color: #fff;
+
+
+}
+footer a:hover {
+  animation: bounce 0.5s infinite alternate;
+}
+@keyframes bounce {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-5px);
+  }
+}
+footer.bottom {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+/* SINGLE PAGE */
+
+.single-crypto-details {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+.left {
+  width: 20%;
+}
+.right {
+  margin-left: 2rem;
+  width: 75%;
+}
+.right h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.right p {
+  text-align: justify;
+  line-height: 1.5;
+}
+.single-crypto-history {
+  padding: 2rem 0;
+}
+.single-crypto-history h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* SEARCH PAGE */
+
+form {
+  width: 50vw;
+  margin: 2rem auto;
+}
+form input,
+form button {
+  margin: 0.25rem 0;
+}
+form input {
+  width: 80%;
+  padding: 6px 12px;
+}
+form button {
+  width: 10%;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+#search-results .result {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  border-radius: 6px;
+  background-color: #fff;
+  box-shadow: 2px 2px 4px 3px rgba(0, 0, 0, 0.5);
+  margin-bottom: 1rem;
+}
+.result .left {
+  width: 80%;
+  margin-right: 1rem;
+  display: flex;
+  align-items: center;
+}
+.result .left * {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+.result .right {
+  width: 10%;
+}
+.result .right .btn {
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+/* style.css */
+
+/* Search bar */
+input[type="text"] {
+  width: 70%; /* Adjust the width as needed */
+  padding: 10px; /* Add padding to the input */
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+
+ 
+  margin-bottom: 20px; /* Add some space below the search bar */
+}
+
+/* Search button */
+button[type="submit"] {
+  width: 28%; /* Adjust the width as needed */
+  padding: 10px; /* Add padding to the button */
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #BA9F33; /* Blue color for the button */
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s; /* Smooth hover effect */
+}
+
+button[type="submit"]:hover {
+  background-color: #BA9F33; 
+  transform: scale(1.1);
+  animation: pulse 0.5s infinite;
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Responsive styles */
+
+
+@media screen and (max-width: 768px) {
+
+
+
+  input[type="text"] {
+    width: 100%; /* Full width on smaller screens */
+    max-width: none; /* Remove max-width limit */
+  }
+  .coins-wrapper {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .coin {
+    width: 90%;
+    margin-bottom: 1rem;
+  }
+  .coins {
+    flex-direction: column;
+    align-items: center;
+  }
+  .coins img {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+  .right {
+    text-align: center;
+  }
+}
+
+
+
+
+
+
+
+/* Adjusted media queries for smaller screens */
+@media screen and (max-width: 600px) {
+  header {
+    padding: 0.5rem 1rem;
+  }
+  header img {
+    width: 80px;
+  }
+  main {
+    padding: 2rem 1rem;
+  }
+  #hero {
+    background-image: none;
+    background-color: #f1f1f1; /* Change to a suitable background color */
+    background-size: cover;
+    background-position: center;
+    padding: 1rem 0;
+  }
+  #hero h1 {
+    font-size: 3rem;
+    text-align: center;
+  }
+  #top-coins {
+    padding: 1rem;
+  }
+  .coins-wrapper {
+    gap: 10px;
+    padding: 1rem;
+  }
+  .coin {
+    min-width: 150px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+  .right {
+    margin-left: 0;
+    width: 100%;
+    text-align: center;
+  }
+  footer {
+    padding: 1rem;
+  }
+}
+
