@@ -249,31 +249,31 @@ form button {
   padding-right: 2px;
 }
 
-/* style.css */
+
 
 /* Search bar */
 input[type="text"] {
-  width: 70%; /* Adjust the width as needed */
-  padding: 10px; /* Add padding to the input */
+  width: 70%; 
+  padding: 10px; 
   font-size: 16px;
   border: 2px solid #ccc;
   border-radius: 5px;
 
  
-  margin-bottom: 20px; /* Add some space below the search bar */
+  margin-bottom: 20px;
 }
 
 /* Search button */
 button[type="submit"] {
-  width: 28%; /* Adjust the width as needed */
-  padding: 10px; /* Add padding to the button */
+  width: 28%; 
+  padding: 10px; 
   font-size: 16px;
   border: none;
   border-radius: 5px;
-  background-color: #BA9F33; /* Blue color for the button */
+  background-color: #BA9F33; 
   color: white;
   cursor: pointer;
-  transition: background-color 0.3s; /* Smooth hover effect */
+  transition: background-color 0.3s; 
 }
 
 button[type="submit"]:hover {
@@ -301,8 +301,8 @@ button[type="submit"]:hover {
 
 
   input[type="text"] {
-    width: 100%; /* Full width on smaller screens */
-    max-width: none; /* Remove max-width limit */
+    width: 100%; 
+    max-width: none;
   }
   .coins-wrapper {
     flex-wrap: wrap;
@@ -344,7 +344,7 @@ button[type="submit"]:hover {
   }
   #hero {
     background-image: none;
-    background-color: #f1f1f1; /* Change to a suitable background color */
+    background-color: #f1f1f1; 
     background-size: cover;
     background-position: center;
     padding: 1rem 0;

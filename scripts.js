@@ -10,7 +10,7 @@ window.addEventListener("load", async () => {
 
   showTrendingCoins(response.coins, exchangeRate.bitcoin.inr);
 
-  // Start automatic scrolling
+ 
   startScrolling();
 });
 
@@ -40,7 +40,6 @@ function showTrendingCoins(data, exchangeRate) {
 
     coinsWrapper.append(coins);
 
-    // Add link to icon
     img.addEventListener("click", () => {
       window.location.href = `details.html?id=${coin.item.id}`;
     });
@@ -59,9 +58,9 @@ async function getDataFromAPI(url) {
 
 function startScrolling() {
   const wrapper = document.querySelector(".coins-wrapper");
-  const scrollDistance = 300; // Adjust as needed
-  const scrollSpeed = 50; // Adjust as needed
-  const pauseTime = 3000; // Pause for 3 seconds
+  const scrollDistance = 300; 
+  const scrollSpeed = 50; 
+  const pauseTime = 3000; 
 
   let interval;
 
